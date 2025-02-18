@@ -17,7 +17,7 @@ public class JavaCountMapArrayMainTest {
     private JavaCountMap javaCountMap;
 
     @Test
-    @DisplayName("Возвращение пустой Map если список равен null")
+    @DisplayName("Возвращает пустую Map, если массив равен null")
     public void givenArrayInteger_ArrayIsNull_ThenReturnEmptyMap(){
         int[] listIntegerIsEmpty = null;
         Map<Integer,Integer> mapResNeedAssert = new HashMap<>();
@@ -25,7 +25,7 @@ public class JavaCountMapArrayMainTest {
     }
 
     @Test
-    @DisplayName("Возвращение пустой Map если массив пустой")
+    @DisplayName("Возвращает пустую Map, если массив пустой")
     public void givenArrayInteger_ArrayIsEmpty_ThenReturnEmptyMap(){
         int[] listIntegerIsEmpty = {};
         Map<Integer,Integer> mapResNeedAssert = new HashMap<>();
@@ -34,7 +34,7 @@ public class JavaCountMapArrayMainTest {
 
 
     @Test
-    @DisplayName("Возвращение Map если массив заполнен числами")
+    @DisplayName("Возвращает Map с количеством элементов, если массив заполнен числами")
     public void givenArrayAnyIntegers_ArrayIsNotEmpty_ThenReturnMap(){
         int[] listAnyIntegers = {1,1,3,2,5,4,2,4};
         Map<Integer,Integer> mapResNeedAssert = new HashMap<Integer,Integer>(){{
@@ -48,7 +48,7 @@ public class JavaCountMapArrayMainTest {
     }
 
     @Test
-    @DisplayName("Возвращает Map если массив заполнен отрицат. числа")
+    @DisplayName("Возвращает Map с количеством элементов, если массив заполнен отрицательными числами")
     public void giveArrayNegativeIntegers_ArrayIsNotEmpty_ThenReturnMap(){
         int[] listNegativeIntegers = {-1,-20,-2,-2,-3};
         Map<Integer,Integer> mapResNeedAssert = new HashMap<Integer, Integer>(){{
@@ -61,7 +61,7 @@ public class JavaCountMapArrayMainTest {
     }
 
     @Test
-    @DisplayName("Возвращает Map если массив заполнен одинаковыми числами")
+    @DisplayName("Возвращает Map с количеством элементов, если массив заполнен одинаковыми числами")
     public void givenArrayIdenticalIntegers_ArrayIsNotEmpty_ThenReturnMap(){
         int[] listIdenticalInteger = {1,1,1,1,1,1};
         Map<Integer,Integer> mapResNeedAssert = new HashMap<Integer,Integer>(){{

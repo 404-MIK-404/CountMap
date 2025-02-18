@@ -18,7 +18,7 @@ public class JavaCountMapListMainTest {
     private JavaCountMap javaCountMap;
 
     @Test
-    @DisplayName("Возвращение пустой Map если список равен null")
+    @DisplayName("Возвращает пустую Map, если список равен null")
     public void givenListInteger_ListIsNull_ThenReturnEmptyMap(){
         List<Integer> listIntegerIsEmpty = null;
         Map<Integer,Integer> mapResNeedAssert = new HashMap<>();
@@ -26,7 +26,7 @@ public class JavaCountMapListMainTest {
     }
 
     @Test
-    @DisplayName("Возвращение пустой Map если список пустой")
+    @DisplayName("Возвращает пустую Map, если список пустой")
     public void givenListInteger_ListIsEmpty_ThenReturnEmptyMap(){
         List<Integer> listIntegerIsEmpty = Collections.emptyList();
         Map<Integer,Integer> mapResNeedAssert = new HashMap<>();
@@ -35,7 +35,7 @@ public class JavaCountMapListMainTest {
 
 
     @Test
-    @DisplayName("Возвращение Map если список заполнен числами")
+    @DisplayName("Возвращает Map с количеством элементов, если список заполнен числами")
     public void givenListAnyIntegers_ListIsNotEmpty_ThenReturnMap(){
         List<Integer> listAnyIntegers = Arrays.asList(1,1,3,2,5,4,2,4);
         Map<Integer,Integer> mapResNeedAssert = new HashMap<Integer,Integer>(){{
@@ -49,7 +49,7 @@ public class JavaCountMapListMainTest {
     }
 
     @Test
-    @DisplayName("Возвращает Map если список заполнен отрицат. числа")
+    @DisplayName("Возвращает Map с количеством элементов, если список заполнен отрицательными числами")
     public void giveListNegativeIntegers_ListIsNotEmpty_ThenReturnMap(){
         List<Integer> listNegativeIntegers = Arrays.asList(-1,-20,-2,-2,-3);
         Map<Integer,Integer> mapResNeedAssert = new HashMap<Integer, Integer>(){{
@@ -62,7 +62,7 @@ public class JavaCountMapListMainTest {
     }
 
     @Test
-    @DisplayName("Возвращает Map если список заполнен одинаковыми числами")
+    @DisplayName("Возвращает Map с количеством элементов, если список заполнен одинаковыми числами")
     public void givenListIdenticalIntegers_ListIsNotEmpty_ThenReturnMap(){
         List<Integer> listIdenticalInteger = Arrays.asList(1,1,1,1,1,1);
         Map<Integer,Integer> mapResNeedAssert = new HashMap<Integer,Integer>(){{
